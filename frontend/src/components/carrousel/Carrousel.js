@@ -1,22 +1,16 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import "./carrousel.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import Carousel from 'react-elastic-carousel';
-import Vid1 from "../../videos/marolio.mp4"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Slider from "react-slick";
 import { products } from "../../context/data";
-import ReactPlayer from 'react-player'
-import Player from "./Player";
-import { Ratio } from "react-bootstrap";
+
 
 const Carrousel = () => {
     const sliderRef = useRef();
-
-    // const [sliderRef, setSliderRef] = useState(null)
 
     var settings = {
         arrows: false,
@@ -26,6 +20,12 @@ const Carrousel = () => {
         slidesToScroll: 2,
         responsive: [
             {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
                 breakpoint: 900,
                 settings: {
                     slidesToShow: 1,
@@ -33,6 +33,12 @@ const Carrousel = () => {
             },
             {
                 breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 300,
                 settings: {
                     slidesToShow: 1,
                 }
@@ -60,10 +66,10 @@ const Carrousel = () => {
                     </div>
                     <div className="flexbutton">
                         <button onClick={() => gotoNext()} className="butonright">
-                            <i class="fa-solid fa-arrow-left fa-xl color"></i>
+                            <i className="fa-solid fa-arrow-left fa-xl color"></i>
                         </button>
                         <button onClick={() => gotoPrev()} className="butonright">
-                            <i class="fa-solid fa-arrow-right fa-xl color"></i>
+                            <i className="fa-solid fa-arrow-right fa-xl color"></i>
                         </button>
                     </div>
 
@@ -73,9 +79,12 @@ const Carrousel = () => {
                             //   <Product key={item.id} img={item.img} link={item.link} />
                             <div key={item.id} className="divbox">
                                 <Card bg="secondary" className="custom" >
-                                    <iframe className="videoyes" src={item.img} height="400px"
-                                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                                    </iframe>
+                                    <video controls height="400px" width="100%" allowFullScreen muted>
+                                        <source src={item.img} type="video/mp4"/>
+                                    </video>
+                                    {/* <iframe className="videoyes" src={item.img} height="400px" type="video/mp4"
+                                        title="YouTube video player" frameBorder="0" allowFullScreen>
+                                    </iframe> */}
                                     <Card.Body>
                                         <Card.Title style={{ color: "black" }}>{item.name}</Card.Title>
                                         <Card.Text style={{ color: "black" }}>

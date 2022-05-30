@@ -1,8 +1,9 @@
 .a {
-  padding-top:100px;
+  padding-top:150px;
   height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .a-left {

@@ -35,40 +35,37 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <div className="c">
-        {/* <div className="c-bg"></div> */}
-        <div className="c-wrapper">
-          <div className="c-left">
-            <h1 className="c-title">Let's discuss your project</h1>
-            <div className="c-info">
-              <div className="c-info-item">
-                <img src={Phone} alt="" className="c-icon" />
-                +54 9 3804 358137
-              </div>
-              <div className="c-info-item">
-                <img className="c-icon" src={Email} alt="" />
-                tici.cobresi21@gmail.com
-              </div>
-              <div className="c-info-item">
-                <img className="c-icon" src={Address} alt="" />
-                Córdoba- La Rioja, Argentina
-              </div>
+      <div className="c-wrapper">
+        <div className="c-left">
+          <h1 className="c-title">Let's discuss your project</h1>
+          <div className="c-info">
+            <div className="c-info-item">
+              <img src={Phone} alt="" className="c-icon" />
+              +54 9 3804 358137
+            </div>
+            <div className="c-info-item">
+              <img className="c-icon" src={Email} alt="" />
+              tici.cobresi21@gmail.com
+            </div>
+            <div className="c-info-item">
+              <img className="c-icon" src={Address} alt="" />
+              Córdoba- La Rioja, Argentina
             </div>
           </div>
-          <div className="c-right">
-            <p className="c-desc">
-              <b>What’s your story?</b> Get in touch. Always available for
-              freelancing if the right project comes along. me.
-            </p>
-            <form ref={formRef} onSubmit={handleSubmit}>
-              <input style={{ backgroundColor: darkMode && "#333", margin: '5px', color: darkMode && "white", width: "70%" }} type="text" placeholder="Name" name="user_name" />
-              <input style={{ backgroundColor: darkMode && "#333", margin: '5px', color: darkMode && "white", width: "70%" }} type="text" placeholder="Subject" name="user_subject" />
-              <input style={{ backgroundColor: darkMode && "#333", margin: '5px', color: darkMode && "white", width: "70%" }} type="text" placeholder="Email" name="user_email" />
-              <textarea className="mesage" style={{ backgroundColor: darkMode && "#333", color: darkMode && "white" }} rows="10" placeholder="Message" name="message" />
-              <button className="botonsubmit">Submit</button>
-              {done && "Thank you..."}
-            </form>
-          </div>
+        </div>
+        <div className="c-right">
+          <p className="c-desc">
+            <b>What’s your story?</b> Get in touch. Always available for
+            freelancing if the right project comes along. me.
+          </p>
+          <form ref={formRef} onSubmit={handleSubmit}>
+            <input style={{ backgroundColor: darkMode && "#333", margin: '5px', color: darkMode && "white", width: "70%" }} type="text" placeholder="Name" name="user_name" />
+            <input style={{ backgroundColor: darkMode && "#333", margin: '5px', color: darkMode && "white", width: "70%" }} type="text" placeholder="Subject" name="user_subject" />
+            <input style={{ backgroundColor: darkMode && "#333", margin: '5px', color: darkMode && "white", width: "70%" }} type="text" placeholder="Email" name="user_email" />
+            <textarea className="mesage" style={{ backgroundColor: darkMode && "#333", color: darkMode && "white" }} rows="10" placeholder="Message" name="message" />
+            <button className="botonsubmit">Submit</button>
+            {done && "Thank you..."}
+          </form>
         </div>
       </div>
     </section>

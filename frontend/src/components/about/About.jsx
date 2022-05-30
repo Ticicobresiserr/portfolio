@@ -1,6 +1,5 @@
 import React from 'react';
 import "./about.css";
-import Award from "../../img/award.png";
 import imagenyo from '../../img/IMG_9823.jpg'
 
 const About = () => {

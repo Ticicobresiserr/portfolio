@@ -1,16 +1,14 @@
 import React, { useContext } from 'react';
-import { BrowserRouter, Router, Route, Routes } from 'react-router-dom';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+import { BrowserRouter } from 'react-router-dom';
 import About from './components/about/About';
 import Intro from "./components/intro/Intro";
-import ProductList from './components/productList/ProductList';
 import Toggle from './components/toggle/Toggle';
 import Contact from './components/contact/Contact';
 import { ThemeContext } from "./context/context";
 import Nabvar from './components/navbar/Nabvar';
 import Carrousel from './components/carrousel/Carrousel';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Card from "./components/carrousel/Player";
-import Carousel from 'react-elastic-carousel';
 
 export default function App() {
   const theme = useContext(ThemeContext);
